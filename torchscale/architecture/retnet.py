@@ -1,6 +1,6 @@
 # Copyright (c) 2022 Microsoft
 # Licensed under The MIT License [see LICENSE for details]
-
+import ipdb
 import math
 
 import numpy as np
@@ -178,6 +178,8 @@ class DecoderLayer(nn.Module):
             x = self.retention_layer_norm(x)
 
         residual = x
+
+
         if self.normalize_before:
             x = self.final_layer_norm(x)
         if not self.is_moe_layer:
