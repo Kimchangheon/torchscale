@@ -178,7 +178,7 @@ class DecoderLayer(nn.Module):
             x = self.retention_layer_norm(x)
 
         residual = x
-
+        ipdb.set_trace(context=6) # breakpoint
 
         if self.normalize_before:
             x = self.final_layer_norm(x)
